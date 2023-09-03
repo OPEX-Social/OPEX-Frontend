@@ -1,0 +1,41 @@
+/* Post Container */
+.post {
+    border: 1px solid #ccc;
+    padding: 16px;
+    margin: 16px;
+    border-radius: 8px;
+    background-color: #282c34;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* User Info */
+  .post .post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    color: whitesmoke;
+  }
+  
+  .post .profile-picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 12px;
+  }
+  
+  .post .user-info .username {
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  .post .user-info .timestamp {
+    color: #999;
+    font-size: 0.9rem;
+  }
+  
+  /* Post Content */
+  .post .post-content {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  
