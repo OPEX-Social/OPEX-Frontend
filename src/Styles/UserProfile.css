@@ -1,0 +1,63 @@
+/* UserProfile Container */
+.user-profile {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #17bf63;
+    border-radius: 20rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Profile Header */
+  .profile-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover;
+    border: 2px solid #17bf63; /* Add a border color or remove this line */
+  }
+  
+  .user-info {
+    flex: 1;
+  }
+  
+  .username {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Verified Badge (adjust size and color as needed) */
+  .verified-badge {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    fill: #17bf63; /* Change the color to match your design */
+  }
+  
+  .bio {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  /* Follower Info */
+  .follower-info {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  .followers,
+  .following {
+    margin-right: 20px;
+  }
+  

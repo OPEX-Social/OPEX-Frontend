@@ -4,10 +4,9 @@ import LikeButton from './LikeButton';
 import RepostButton from './RepostButton';
 
 import './../Styles/Post.css';
-import './../Styles/PostButtons.css';
 import VerifiedBadge from './VerifiedBadge';
 
-const Post = ({ username, content, timestamp }) => {
+const Post = ({ username, isVerified, content, timestamp }) => {
   return (
     <div className="post">
       <div className="post-header">
@@ -17,17 +16,16 @@ const Post = ({ username, content, timestamp }) => {
           className="profile-picture"
         />
         <div className="user-info">
-          <span className="username">@{username} </span>
-          <VerifiedBadge />
+          <span className="username">@{username}
+            {isVerified && <VerifiedBadge />}
+          </span>
           <span className="timestamp">{timestamp}</span>
         </div>
       </div>
       <p className="post-content">{content}</p>
-      
-      <div className="post-buttons">
-        <LikeButton /> {/* Include the LikeButton component */}
-        <RepostButton /> {/* Include the RepostButton component */}
-      </div>
+      <span className="post-buttons">
+          <LikeButton /><RepostButton /> <LikeButton /> <RepostButton />
+      </span>
     </div>
   );
 };

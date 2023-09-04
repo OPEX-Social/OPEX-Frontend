@@ -1,42 +1,99 @@
+:root {
+  --offwhite: #CCCCCC;
+  --sortawhite: #EEEEEE;
+
+  --sortablack: #282c34;
+}
+
 /* Post Container */
 .post {
-    border: 1px solid #ccc;
-    padding: 16px;
-    margin: 16px;
-    border-radius: 8px;
-    background-color: #282c34;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* User Info */
-  .post .post-header {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-    color: whitesmoke;
-  }
-  
-  .post .profile-picture {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 12px;
-  }
-  
-  .post .user-info .username {
-    font-weight: bold;
-    font-size: 1.2rem;
-  }
-  
-  .post .user-info .timestamp {
-    color: #999;
-    font-size: 0.9rem;
-  }
-  
-  /* Post Content */
-  .post .post-content {
-    font-size: 1.2rem;
-    margin-bottom: 8px;
-    color:whitesmoke;
-  }
-  
+  border: 1px solid var(--offwhite);
+  padding: 16px;
+  margin: 16px;
+  border-radius: 8px;
+  background-color: #282c34;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+}
+
+/* User Info */
+.post .post-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  color: var(--sortawhite);
+}
+
+.post .profile-picture {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.post .user-info .username {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.post .user-info .timestamp {
+  color: #999;
+  font-size: 0.9rem;
+}
+
+/* Post Content */
+.post .post-content {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: whitesmoke;
+}
+
+.post-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* Default Like Button */
+.like-button button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #AAAAAA;
+  padding: 0;
+}
+
+/* Liked Like Button */
+.like-button button.liked {
+  color: #e0245e;
+}
+
+/* Like Count */
+.like-button .like-count {
+  margin-left: 5px;
+  font-size: 14px;
+  color: #777;
+}
+
+/* Default Repost Button */
+.repost-button button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #AAAAAA;
+  padding: 0;
+}
+
+/* Reposted Repost Button */
+.repost-button button.reposted {
+  color: #17bf63;
+  /* A green color for the reposted state */
+}
+
+/* Repost Count */
+.repost-button .repost-count {
+  margin-left: 5px;
+  font-size: 14px;
+  color: #777;
+}

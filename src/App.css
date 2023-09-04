@@ -1,3 +1,9 @@
+:root {
+  --sortablack: #282c34;
+
+  background-color: var(--sortablack);
+}
+
 .App {
   text-align: left;
   background-color: #282c34;
