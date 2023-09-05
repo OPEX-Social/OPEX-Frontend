@@ -4,34 +4,18 @@ import './App.css';
 import Post from './Components/Post';
 import UserProfile from './Components/UserProfile';
 import Button from './Components/Button';
-import Deck from './Components/Deck';
+import Deck from './Components/Posts';
+import Profile from './Components/Profile';
+import LoginButton from './Components/LoginButton';
+import LogoutButton from './Components/LogoutButton';
 
 function App() {
   return (
     <div className="App">
 
-      <Button label="Click me!" onClick={() => alert("Hello, world!")} />
+<LoginButton/>
 
-      <Deck posts={[
-        {
-          username: "ibxcodecat",
-          isVerified: true,
-          content: "I love cats!",
-          timestamp: "4:49 PM - 3 August 2023",
-        },
-        {
-          username: "ibxcodedog",
-          isVerified: false,
-          content: "I love dogs!",
-          timestamp: "4:49 PM - 3 August 2023",
-        },
-        {
-          username: "ibxcodebird",
-          isVerified: true,
-          content: "I love birds!",
-          timestamp: "4:49 PM - 3 August 2023",
-        }
-      ]} />
+<LogoutButton/>
 
 
       <UserProfile user={{
