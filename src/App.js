@@ -4,6 +4,7 @@ import './App.css';
 import Post from './Components/Post';
 import UserProfile from './Components/UserProfile';
 import Button from './Components/Button';
+import Deck from './Components/Deck';
 
 function App() {
   return (
@@ -11,12 +12,27 @@ function App() {
 
       <Button label="Click me!" onClick={() => alert("Hello, world!")} />
 
-      <Post
-        username="ibxcodecat"
-        isVerified={true}
-        content="I love cats!"
-        timestamp="4:49 PM - 3 August 2023"
-      />
+      <Deck posts={[
+        {
+          username: "ibxcodecat",
+          isVerified: true,
+          content: "I love cats!",
+          timestamp: "4:49 PM - 3 August 2023",
+        },
+        {
+          username: "ibxcodedog",
+          isVerified: false,
+          content: "I love dogs!",
+          timestamp: "4:49 PM - 3 August 2023",
+        },
+        {
+          username: "ibxcodebird",
+          isVerified: true,
+          content: "I love birds!",
+          timestamp: "4:49 PM - 3 August 2023",
+        }
+      ]} />
+
 
       <UserProfile user={{
         username: "ibxcodecat",

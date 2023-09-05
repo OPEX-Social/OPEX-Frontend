@@ -1,0 +1,10 @@
+@import './../App.css';
+
+/* Deck Styles */
+.deck {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 10px;
+    /* Adjust the gap between tweets */
+}

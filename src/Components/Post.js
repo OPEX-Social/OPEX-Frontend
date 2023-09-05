@@ -24,7 +24,7 @@ const Post = ({ username, isVerified, content, timestamp }) => {
       </div>
       <p className="post-content">{content}</p>
       <span className="post-buttons">
-          <LikeButton /><RepostButton /> <LikeButton /> <RepostButton />
+          <LikeButton /><RepostButton /> <LikeButton />
       </span>
     </div>
   );
