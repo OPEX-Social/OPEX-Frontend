@@ -1,9 +1,12 @@
+@import './../App.css';
+
 /* Navbar Styles */
 .navbar {
-    background-color: #007bff;
+    background: linear-gradient(90deg, var(--theme-blue-primary), var(--theme-blue-secondary));
     /* Background color of the navbar */
     color: white;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
@@ -13,6 +16,9 @@
 .logo {
     font-size: 24px;
     font-weight: bold;
+    border-radius: 50%;
+    height: 5rem;
+    width: 5rem;
 }
 
 .nav-links {
@@ -23,12 +29,11 @@
 
 .nav-links li a {
     text-decoration: none;
-    color: white;
+    color: var(--sortawhite);
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-    color: #f8f9fa;
-    /* Change color on hover */
+    color: var(--offwhite);
 }
