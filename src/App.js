@@ -8,24 +8,16 @@ import Deck from './Components/Posts';
 import Profile from './Components/Profile';
 import LoginButton from './Components/LoginButton';
 import LogoutButton from './Components/LogoutButton';
+import Navbar from './Components/Navbar';
 
 function App() {
   return (
     <div className="App">
 
+<Navbar/>
 <LoginButton/>
 
 <LogoutButton/>
-
-
-      <UserProfile user={{
-        username: "ibxcodecat",
-        bio: "I love cats!",
-        followers: 100,
-        following: 100,
-        profilePicture: "https://avatars.githubusercontent.com/u/47279783?v=4",
-        isVerified: true
-      }} />
 
     </div>
   );
