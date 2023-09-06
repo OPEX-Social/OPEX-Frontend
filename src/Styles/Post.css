@@ -1,6 +1,3 @@
-/*Import Root CSS*/
-@import './../App.css';
-
 :root {
   --post-button-margin: 5px;
 }

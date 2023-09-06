@@ -10,7 +10,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="logo">
         <a href={window.location.origin}>
-          <img class="logo" src="https://avatars.githubusercontent.com/u/47279783?v=4" alt="logo" />
+          <img className="logo" src="https://avatars.githubusercontent.com/u/47279783?v=4" alt="logo" />
         </a>
       </div>
       <h1>OPEX</h1>

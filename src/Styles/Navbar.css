@@ -1,7 +1,7 @@
 @import './../App.css';
 
 /* Navbar Styles */
-.navbar {
+nav.navbar {
     background: linear-gradient(90deg, var(--theme-blue-primary), var(--theme-blue-secondary));
     /* Background color of the navbar */
     color: white;
@@ -13,7 +13,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.logo {
+img.logo {
     font-size: 24px;
     font-weight: bold;
     border-radius: 50%;
@@ -21,19 +21,19 @@
     width: 5rem;
 }
 
-.nav-links {
+ul.nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
-.nav-links li a {
+ul.nav-links > li > a {
     text-decoration: none;
     color: var(--sortawhite);
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
-.nav-links li a:hover {
+ul.nav-links > li > a:hover {
     color: var(--offwhite);
 }

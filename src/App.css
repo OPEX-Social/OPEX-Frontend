@@ -1,16 +1,109 @@
 :root {
   --offwhite: #CCCCCC;
   --sortawhite: #EEEEEE;
-  --sortablack: #282c34;
-  --gray: #999999;
+  --sortablack: #1E1F22;
+  --sortagray: #313338;
+  --offgray: #999999;
 
   --like-color: #e0245e;
   --repost-color: #17bf63;
 
   --theme-blue-primary: #007bff;
   --theme-blue-secondary: #00d4ff;
+  --theme-blue-tertiary: #0056b3;
 
-  background-color: var(--sortablack);
+  /* Width = 100% - 2 * padding */
+  --input-module-padding: 1%;
+  --input-module-width: 98%;
+
+  background-color: var(--sortagray);
+  color: var(--sortawhite);
 
   transition: 300ms ease;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.cancel-button {
+  background-color: var(--offgray);
+}
+
+button:hover {
+  background-color: var(--theme-blue-tertiary);
+  /* Change color on hover */
+}
+
+button:disabled {
+  background-color: var(--offgray);
+  cursor: not-allowed;
+}
+
+/*If we are displaying a group of buttons give them spacing*/
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+/* Modal Styles */
+.modal {
+  background-color: var(--sortagray);
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+textarea {
+  width: 98%;
+  padding: 1%;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+  font-size: 16px;
+
+  height: 6rem;
+
+  padding: 10px 0px 0px 10px;
+
+  scroll-behavior: smooth;
+
+  color: var(--sortawhite);
+  background-color: var(--sortablack);
+}
+
+/*Remove Outline from TextArea*/
+textarea:focus {
+  outline: none;
+}
+
+/* Modal Overlay Styles */
+.modal-overlay {
+
+  /* Position fixed on top of everything else */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  /* Semi-transparent overlay */
+  background-color: rgba(0, 0, 0, 0.7);
+
+  /* Content is centered horizontally & vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

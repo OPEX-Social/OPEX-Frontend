@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
 
 import { Route, Routes } from 'react-router-dom';
 import ProfilePage from './Components/Profile/ProfilePage';
 import Navbar from './Components/Navbar';
-import Deck from './Components/Deck/Deck';
+import Feed from './Components/Deck/Feed';
+import NewPost from './Components/NewPost';
 
 const posts = [
   {
@@ -32,9 +32,10 @@ function App() {
     <div className="App">
         <Navbar />
         <Routes>
-          <Route path="/" element={<Deck posts={[posts]} />} />
+          <Route path="/" element={<Feed posts={posts} />} />
           <Route path="/profile" element={<ProfilePage/>} />
         </Routes>
+        <NewPost />
     </div>
   );
 }

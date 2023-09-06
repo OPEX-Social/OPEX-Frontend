@@ -1,8 +1,8 @@
 import React from 'react';
-import Post from './../Post'; // Import your Tweet component
+import Post from '../Post'; // Import your Tweet component
 import './../../Styles/Deck.css'; // Import your CSS for styling
 
-const Deck = ({ posts: posts }) => {
+const Feed = ({ posts }) => {
   return (
     <div className="deck">
       {posts.map((post, index) => (
@@ -18,4 +18,4 @@ const Deck = ({ posts: posts }) => {
   );
 };
 
-export default Deck;
+export default Feed;
