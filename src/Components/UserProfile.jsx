@@ -1,7 +1,6 @@
 import React from 'react';
 import VerifiedBadge from './VerifiedBadge'; // Import VerifiedBadge component
 import './../Styles/UserProfile.css'; // Import CSS for styling
-import Button from './Button';
 
 const UserProfile = ({ user }) => {
   const { username, bio, followers, following, profilePicture, isVerified } = user;

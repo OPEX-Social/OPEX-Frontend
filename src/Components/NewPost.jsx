@@ -4,7 +4,7 @@ import Modal from 'react-modal'; // Import react-modal
 
 Modal.setAppElement('#root'); // Set the root element for react-modal
 
-const NewPost = ({ onNewTweet: onNewPost }) => {
+const NewPost = ({ onNewPost }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [postContent, setPostContent] = useState('');
 
