@@ -6,7 +6,8 @@ import Feed from './Components/Deck/Feed';
 import NewPost from './Components/NewPost';
 
 import SuperTokens from "supertokens-auth-react";
-import ThirdPartyEmailPassword, {Github, Google } from "supertokens-auth-react/recipe/thirdpartyemailpassword";
+import Passwordless from "supertokens-auth-react/recipe/passwordless";
+import ThirdPartyEmailPassword, { Github, Google } from "supertokens-auth-react/recipe/thirdpartyemailpassword";
 import Session from "supertokens-auth-react/recipe/session";
 
 import { getSuperTokensRoutesForReactRouterDom } from "supertokens-auth-react/ui";
@@ -39,38 +40,42 @@ const posts = [
 
 SuperTokens.init({
   appInfo: {
-      // learn more about this on https://supertokens.com/docs/thirdpartyemailpassword/appinfo
-      appName: "OPEX",
-      apiDomain: "http://localhost:8081",
-      websiteDomain: "http://localhost:3000",
-      apiBasePath: "/auth",
-      websiteBasePath: "/auth"
+    // learn more about this on https://supertokens.com/docs/thirdpartyemailpassword/appinfo
+    appName: "OPEX",
+    apiDomain: "http://localhost:8081",
+    websiteDomain: "http://localhost:3000",
+    apiBasePath: "/auth",
+    websiteBasePath: "/auth"
   },
   recipeList: [
-      ThirdPartyEmailPassword.init({
-          signInAndUpFeature: {
-              providers: [
-                  Github.init(),
-                  Google.init(),
-              ]
-          }
-      }),
-      Session.init()
+    Passwordless.init({
+      contactMethod: "EMAIL"
+    }),
+    /*
+    ThirdPartyEmailPassword.init({
+      /*signInAndUpFeature: {
+        providers: [
+          Github.init(),
+          Google.init(),
+        ]
+      }
+    })*/
+    Session.init()
   ]
 });
 
 function App() {
   return (
     <div className="App">
-        <Navbar />
-        <Routes>
-          {/*This renders the login UI on the /auth route*/}
-          {getSuperTokensRoutesForReactRouterDom(reactRouterDom, [ThirdPartyEmailPasswordPreBuiltUI])}
-          
-          <Route path="/" element={<Feed posts={posts} />} />
-          <Route path="/profile" element={<ProfilePage/>} />
-        </Routes>
-        <NewPost />
+      <Navbar />
+      <Routes>
+        {/*This renders the login UI on the /auth route*/}
+        {getSuperTokensRoutesForReactRouterDom(reactRouterDom, [ThirdPartyEmailPasswordPreBuiltUI])}
+
+        <Route path="/" element={<Feed posts={posts} />} />
+        <Route path="/profile" element={<ProfilePage />} />
+      </Routes>
+      <NewPost />
     </div>
   );
 }
