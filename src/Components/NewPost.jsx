@@ -14,15 +14,15 @@ const NewPost = ({ onNewTweet: onNewPost }) => {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    setPostContent(''); // Clear the tweet content when closing the modal
+    setPostContent(''); // Clear the post content when closing the modal
   };
 
   const handlePostSubmit = (event) => {
     event.preventDefault();
-    // You can send the new tweet data to your backend or perform any other necessary actions.
+    // You can send the new post data to your backend or perform any other necessary actions.
     setIsModalOpen(false);
-    setPostContent(''); // Clear the tweet content when the tweet is submitted
-    onNewPost(); // Callback to notify the parent component of the new tweet.
+    setPostContent(''); // Clear the post content when the post is submitted
+    onNewPost(); // Callback to notify the parent component of the new post.
   };
 
   const isPostButtonDisabled = postContent.trim() === ''; // Disable if no content
@@ -40,6 +40,9 @@ const NewPost = ({ onNewTweet: onNewPost }) => {
       >
         <h2>Create a New Post</h2>
         <form onSubmit={handlePostSubmit}>
+          <p>
+            You will be sharing what you type below with the world for 1 year. Be careful what information you share here!
+          </p>
           <textarea
             placeholder="Tell the world! (In 140 characters or less)"
             value={postContent}
