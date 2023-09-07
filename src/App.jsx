@@ -10,9 +10,11 @@ import { Routes, Route } from "react-router-dom";
 import SuperTokens from "supertokens-auth-react";
 import EmailPassword from "supertokens-auth-react/recipe/emailpassword";
 import Session from "supertokens-auth-react/recipe/session";
+import EmailVerification from "supertokens-auth-react/recipe/emailverification";
 
 import { getSuperTokensRoutesForReactRouterDom } from "supertokens-auth-react/ui";
 import { EmailPasswordPreBuiltUI } from "supertokens-auth-react/recipe/emailpassword/prebuiltui";
+import { EmailVerificationPreBuiltUI } from "supertokens-auth-react/recipe/emailverification/prebuiltui";
 
 import * as reactRouterDom from "react-router-dom";
 
@@ -47,6 +49,9 @@ SuperTokens.init({
   },
   recipeList: [
     EmailPassword.init(),
+    EmailVerification.init({
+      mode: "REQUIRED", //Or "OPTIONAL"
+    }),
     Session.init()
   ]
 });
@@ -57,7 +62,7 @@ function App() {
       <Navbar />
       <Routes>
         {/*This renders the login UI on the /auth route*/}
-        {getSuperTokensRoutesForReactRouterDom(reactRouterDom, [EmailPasswordPreBuiltUI])}
+        {getSuperTokensRoutesForReactRouterDom(reactRouterDom, [EmailPasswordPreBuiltUI, EmailVerificationPreBuiltUI])}
 
         <Route path="/" element={<Feed posts={posts} />} />
         <Route path="/profile" element={<ProfilePage />} />
