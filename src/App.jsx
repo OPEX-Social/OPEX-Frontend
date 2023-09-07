@@ -5,13 +5,10 @@ import Navbar from './Components/Navbar';
 import Feed from './Components/Deck/Feed';
 import NewPost from './Components/NewPost';
 
-
-
 import { Routes, Route } from "react-router-dom";
 
-
 import SuperTokens from "supertokens-auth-react";
-import EmailPassword, { EmailPasswordComponentsOverrideProvider } from "supertokens-auth-react/recipe/emailpassword";
+import EmailPassword from "supertokens-auth-react/recipe/emailpassword";
 import Session from "supertokens-auth-react/recipe/session";
 
 import { getSuperTokensRoutesForReactRouterDom } from "supertokens-auth-react/ui";
